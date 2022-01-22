@@ -50,14 +50,14 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
 
         alertDialogBuilder = new AlertDialog.Builder(Menu.this);
         alertDialogBuilder.setMessage("Ki akarsz lépni az alkalmazásból?");
-        alertDialogBuilder.setNegativeButton("Nem", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setPositiveButton("Nem", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(Menu.this, "Nem zártad be az alkalmazást!",
                         Toast.LENGTH_SHORT).show();
             }
         });
-        alertDialogBuilder.setPositiveButton("Igen", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNegativeButton("Igen", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 finish();
